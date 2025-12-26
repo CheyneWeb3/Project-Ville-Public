@@ -32,6 +32,9 @@ Each Plant NFT (ERC-721) has an ERC-6551 smart wallet (TBA) that holds ERC-1155 
 * **Renderer contract** for on-chain `tokenURI` (or off-chain renderer).
 * **Obstacles/Event contract** that PlantCore can query/use to adjust difficulty per season.
 
+
+![Budsville Logo](https://github.com/CheyneWeb3/Project-Ville/blob/main/contractdiagram.png)
+
 ---
 
 ## Off-chain systems
