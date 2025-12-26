@@ -227,11 +227,3 @@ If you want the game to land in Scenario 1–2 most of the time:
   * speed increases risk (faster stage changes) to keep it balanced
 
 ---
-
-If you want, next I can turn this into a proper “mini feasibility report” format:
-
-* summary
-* KPI targets (harvest rate, avg quality, ARPPU, retention)
-* economic projections (monthly based on seasons/week)
-* risk list (exploits, perception, balancing)
-* recommended launch plan (testnet → season 0 free → season 1 paid)
