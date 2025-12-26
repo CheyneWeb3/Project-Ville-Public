@@ -1,4 +1,4 @@
-Cool — final rule (as I understand it now):
+# Scenario Examples of a Game Season
 
 ### ✅ Season rule
 
