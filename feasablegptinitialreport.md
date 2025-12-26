@@ -333,8 +333,3 @@ Suggested cadence:
 * Botting dominates early
 
 ---
-
-If you want, next I can turn the above into:
-
-* a one-page “pitch summary” for the website/whitepaper, and
-* a balancing table (exact decay/threshold numbers) tuned to hit Scenario A (player-friendly) and Scenario B (balanced).
