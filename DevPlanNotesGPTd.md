@@ -1,6 +1,4 @@
-Below is a **team-dev report** you can drop straight into your internal docs. It explains the **system operations**, the **control knobs** (difficulty/season tuning), and what the **frontend + server** must do to run the game end-to-end.
 
----
 
 # Living NFTs (ERC-6551) — System Operations & Controls Report
 
@@ -441,9 +439,3 @@ Define roles clearly:
 * dashboards: survival/quality distribution & revenue split
 
 ---
-
-If you want, paste your **exact current contract interfaces/addresses** (or the latest repo layout), and I’ll turn this report into:
-
-* a precise **API list** (every function the frontend must call),
-* event schemas for the indexer,
-* and a “season config JSON” format your team can use to run progressive difficulty without chaos.
