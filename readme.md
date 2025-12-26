@@ -161,20 +161,3 @@ Expose compact view methods so the UI can batch read everything via **Multicall3
 * `pendingRewards(tokenId)` (via HarvestPool)
 
 ---
-
-## Repo layout (suggested)
-
-```
-/contracts
-  PlantNFT.sol
-  PlantCore.sol
-  Items1155.sol
-  HarvestPool.sol
-  GeneticsLib.sol
-  (ERC-6551 registry + account implementation)
-/scripts
-/test
-/frontend (optional)
-```
-
----
