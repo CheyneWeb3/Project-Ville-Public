@@ -1,5 +1,3 @@
-Got it. Here’s what **PlantCore** is doing, how it works end-to-end, and what your “first steps” workflow looks like.
-
 ## What PlantCore is
 
 **PlantCore is the game engine.**
@@ -373,5 +371,3 @@ Here’s the clean deployment + test flow:
 * if not pollinated: flowers minted to TBA
 
 That’s the full lifecycle.
-
-If you want, next step I can give you a **minimal test script** (Foundry or Hardhat) that proves: mint → tba receive items → approve via TBA → care burns → harvest registers → seed minting works.
