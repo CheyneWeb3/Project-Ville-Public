@@ -312,6 +312,13 @@ constructor(
         emit Synced(tokenId, nowTs, p.water, p.food, p.health, p.quality, p.wilted, p.dead);
     }
 
+    function mintSeedOnly(address to) external onlyOwner returns (uint256 tokenId, uint256 genes) {
+        require(to != address(0), "to=0");
+        genes = uint256(keccak256(abi.encode(block.prevrandao, block.timestamp, to, activeSeasonId, address(this))));
+        tokenId = plantNFT.mintSeed(to, genes);
+    }
+
+
     function mintAndPlant(address to) external nonReentrant returns (uint256 tokenId) {
         require(to != address(0), "PlantCore: to=0");
         uint256 genes = uint256(keccak256(abi.encode(block.prevrandao, block.timestamp, to, address(this))));
