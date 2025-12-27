@@ -1,4 +1,12 @@
 // SPDX-License-Identifier: MIT
+
+
+/*
+* 6551 Account Contract    - 0xBaDe6fe10382D1fF54EB5AfED80Bfa19f9242f90
+* 6551 Registry Contract   - 0x86c45F01b98394E01cFFFd64172c3897E40a3F62
+*/
+
+
 pragma solidity 0.8.30;
 
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
@@ -32,6 +40,8 @@ interface IPlantNFTCore {
     function ownerOf(uint256 tokenId) external view returns (address);
     function getApproved(uint256 tokenId) external view returns (address);
     function isApprovedForAll(address owner, address operator) external view returns (bool);
+
+    function sexOf(uint256 tokenId) external view returns (uint8);
 
     function genesOf(uint256 tokenId) external view returns (uint256);
 
@@ -242,6 +252,10 @@ constructor(
     {
         PlantState storage p = _plant[tokenId];
         return (p.plantedAt, p.lastUpdateAt, p.water, p.food, p.health, p.quality, p.wilted, p.dead, p.harvested);
+    }
+
+    function sexOf(uint256 tokenId) external view returns (uint8) {
+        return plantNFT.sexOf(tokenId);
     }
 
     function getUpgrades(uint256 tokenId)
@@ -558,6 +572,9 @@ constructor(
         Stage fs = stageOf(fatherId);
         require(ms == Stage.BLOOM || ms == Stage.HARVEST_WINDOW, "PlantCore: mother not bloom");
         require(fs == Stage.BLOOM || fs == Stage.HARVEST_WINDOW, "PlantCore: father not bloom");
+
+        require(plantNFT.sexOf(motherId) == 0, "PlantCore: mother not female");
+        require(plantNFT.sexOf(fatherId) == 1, "PlantCore: father not male");
 
         m.pollinatedWith = uint32(fatherId);
         m.pollinatedAt = uint64(block.timestamp);
