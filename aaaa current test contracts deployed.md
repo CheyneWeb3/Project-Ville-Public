@@ -1,6 +1,5 @@
-# Project Ville – Deployed Contracts (BSC Testnet)
+# Project Ville – Initial Test Deployed Contracts (BSC Testnet)
 
-This page links to the verified source code for the currently deployed contracts on **BSC Testnet**.
 
 ---
 
